@@ -7,7 +7,7 @@ import './cancelOrder.css'
 
 function CancelOrder(){
 
-    const [orders, setOrders] = useState([])
+    const [orders, setOrders] = useState([]);
 
     const navigate = useNavigate();
 
@@ -24,25 +24,28 @@ function CancelOrder(){
         orders.filter((orders) => {
             return(orders.id !== id);
         });
+
         if(orders.id !== id){
-            alert('The record is deleted successfully!')
+            alert('The record is deleted successfully!');
         }else{
-            alert('Oops! Something went wrong, please try again!')
+            alert('Oops! Something went wrong, please try again!');
         }
-        setOrders(orders)
-    }
-    const handleLogout = () => {
-        localStorage.removeItem("user")
-        navigate('/');
-    }
-    useEffect(() => {
+        setOrders(orders);
+    };
+    
+    useEffect( () => {
         const fetchOrderList = async () => {
             const orderList = await axios.get('https://61b6012ac95dd70017d40dcd.mockapi.io/api/V1/Pizza');
             setOrders(orderList.data);
-            console.log(orderList.data);
+            //console.log(orderList.data);
         };
         fetchOrderList();
     }, [setOrders,{...orders}]);
+
+    const handleLogout = () => {
+        localStorage.removeItem("user")
+        navigate('/');
+    };
     return (
         <div>
             <h3 className='list'>Pizza Order List</h3>
