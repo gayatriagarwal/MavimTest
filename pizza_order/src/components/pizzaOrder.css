@@ -1,0 +1,39 @@
+.btn1 {
+  border: none;
+  outline: none;
+  outline-width: 0;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 250ms;
+}
+.btn1:hover {
+  background: rgb(173, 168, 168);
+  border: 1px;
+  color: black;
+  transition: 250ms;
+}
+
+.img-fluid {
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  top: 70px;
+  left: 150px;
+}
+
+.name2 {
+  font-size: 30px;
+  color: whitesmoke;
+  bottom: 18px;
+  position: relative;
+}
+
+.form-row > p {
+  color: rgb(148, 26, 26);
+}
