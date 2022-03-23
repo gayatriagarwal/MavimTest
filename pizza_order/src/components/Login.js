@@ -41,7 +41,7 @@ function Login(){
     console.log(formErrors)
     if(Object.keys(formErrors).length === 0 && isSubmitted) {
         console.log(formvalues)
-        navigate('/pizzaOrder');
+        navigate('/cancelOrder');
     }
   },[formErrors,formvalues,isSubmitted,navigate])
     
